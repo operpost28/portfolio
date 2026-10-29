@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Александр Горулёв — оператор-постановщик. «Склифосовский», «Свобода», «Частная жизнь». Шоурил, фильмография, избранные работы и контакты.">
+  <title>Александр Горулёв — оператор-постановщик кино и сериалов</title>
+  <link rel="canonical" href="https://alexandergorulev.com/">
+  <link rel="stylesheet" href="styles.css?v=shared-nav-1">
+  <style>
+    /* Start-page adjustments only. */
+    body > main{padding-top:24px}
+    .home-contacts{height:63px;padding-left:8%;padding-right:8%;font-size:24px;line-height:12px;flex-wrap:nowrap}
+    .home-contacts a:last-child{text-align:right}
+    @media(min-width:1600px){.home-contacts{padding-left:max(8%,calc((100vw - 1400px)/2));padding-right:max(8%,calc((100vw - 1400px)/2))}}
+    @media(max-width:760px){.home-contacts{height:87px;padding-left:7%;padding-right:7%;font-size:clamp(12px,2.5vw,16px);line-height:20px;gap:12px}}
+  </style>
+  <script src="content.js?v=pages-1" defer></script>
+  <script src="app.js?v=pages-1" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="works.html" data-i18n="skip">Перейти к работам</a>
+  <header class="header">
+    <a class="wordmark" href="index.html" aria-label="На главную">AG<span class="wordmark-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="index.html" data-i18n="homeNav">Главная</a>
+      <a href="works.html" data-i18n="work">Работы</a>
+      <a href="filmography.html" data-i18n="filmographyTitle">Фильмография</a>
+      <a href="about.html" data-i18n="about">Обо мне</a>
+    </nav>
+    <div class="header-actions">
+      <div class="languages" aria-label="Language"><button data-lang="ru" aria-pressed="true">RU</button><span>/</span><button data-lang="en" aria-pressed="false">EN</button></div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню"><span></span><span></span></button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+      <a href="index.html" data-i18n="homeNav">Главная</a>
+      <a href="works.html" data-i18n="work">Работы</a>
+      <a href="filmography.html" data-i18n="filmographyTitle">Фильмография</a>
+      <a href="about.html" data-i18n="about">Обо мне</a>
+    </nav>
+  </header>
+  <main>
+    <section id="top" class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/hero-frame-hq.jpg" alt="" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="hero-content"><p class="eyebrow" data-i18n="role">Оператор-постановщик</p><h1 id="hero-title"><span data-i18n="firstName">Александр</span><span data-i18n="lastName">Горулев</span></h1><button class="play-button" data-showreel><span class="play-icon" aria-hidden="true">▶</span><span>PLAY SHOWREEL</span></button></div>
+      <div class="hero-bottom"><a href="works.html" class="scroll-link"><span data-i18n="selected">Избранные работы</span><span aria-hidden="true">↓</span></a></div>
+    </section>
+  </main>
+  <footer class="footer home-contacts"><a href="tel:+79161122230">+7 916 112-22-30</a><a href="https://www.instagram.com/gorulevalexandr/?hl=ru" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:agorulev@gmail.com">agorulev@gmail.com</a></footer>
+  <dialog id="showreel-dialog" aria-label="Showreel"><div class="dialog-top"><span class="eyebrow">Showreel</span><button class="close-button" data-close aria-label="Закрыть">×</button></div><div id="showreel-player" class="showreel-player"></div><p class="video-fallback"><a href="https://www.youtube.com/watch?v=oEOQJXaLBaw" target="_blank" rel="noopener noreferrer" data-i18n="youtubeLink">Открыть на YouTube ↗</a></p></dialog>
+</body>
+</html>

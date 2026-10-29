@@ -1,0 +1,7 @@
+.trailer-link{display:inline-block;margin-top:12px;padding:0;background:none;font-size:11px;letter-spacing:1.5px;color:var(--muted)}
+#trailer-dialog{width:min(calc(100vw - 32px),calc((100svh - 132px)*16/9 + 48px));max-width:none;max-height:calc(100svh - 32px);padding:24px}
+#trailer-dialog .dialog-top{gap:16px;margin-bottom:12px}
+#trailer-dialog .eyebrow{line-height:1.5}
+#trailer-dialog .close-button{flex-shrink:0}
+#trailer-player{width:100%;aspect-ratio:16/9;background:#000}
+#trailer-player iframe{display:block;width:100%;height:100%;border:0}

@@ -1,0 +1,14 @@
+/* Page-only layout; shared visual components come from styles.css. */
+.filmography{padding-top:190px;padding-bottom:105px}
+.filmography-heading{margin-bottom:64px}
+.filmography-heading h1{font-size:clamp(32px,4.6vw,68px);font-weight:400;letter-spacing:-.055em;line-height:1.15;margin:0 0 24px}
+.filmography-heading .eyebrow{margin:0;line-height:1.8}
+.filmography-list{margin:0}
+.filmography-row{display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,3fr);gap:28px;padding:32px 0;border-top:1px solid var(--line)}
+.filmography-row dt{font-size:14px;color:var(--muted);line-height:1.8;padding-top:5px;font-variant-numeric:tabular-nums}
+.filmography-row dd{margin:0;min-width:0}
+.filmography-row ul{list-style:none;margin:0;padding:0}
+.filmography-row li{font-size:clamp(20px,1.9vw,30px);line-height:1.6;font-weight:400;overflow-wrap:break-word}
+.filmography-row li+li{margin-top:10px}
+@media(min-width:1600px){.filmography{padding-left:max(8%,calc((100vw - 1400px)/2));padding-right:max(8%,calc((100vw - 1400px)/2))}}
+@media(max-width:760px){.filmography{padding-top:140px;padding-bottom:68px}.filmography-heading{margin-bottom:40px}.filmography-row{grid-template-columns:1fr;gap:14px;padding:26px 0}.filmography-row dt{padding-top:0;font-size:13px}}

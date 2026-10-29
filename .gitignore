@@ -1,0 +1,7 @@
+# Архивы и копии для Netlify (на GitHub не отправляем)
+*.zip
+netlify-drop-*/
+
+# Служебные файлы
+.DS_Store
+.netlify/

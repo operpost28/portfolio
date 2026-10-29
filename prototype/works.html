@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Портфолио оператора-постановщика Александра Горулёва. Кадры из фильмов и сериалов «Свобода», «Склифосовский», «Частная жизнь» и других проектов.">
+  <title>Работы Александра Горулёва — оператор-постановщик кино и сериалов</title>
+  <link rel="canonical" href="https://alexandergorulev.com/works">
+  <link rel="stylesheet" href="styles.css?v=shared-nav-1">
+  <link rel="stylesheet" href="works-trailers.css">
+  <style>
+    .work .section-note{font-size:24px}
+    @media(max-width:760px){.work .section-note{display:block;font-size:18px}}
+  </style>
+  <script src="content.js?v=pages-1" defer></script>
+  <script src="app.js?v=pages-1" defer></script>
+  <script src="works-trailers.js" defer></script>
+</head>
+<body id="top" class="inner-page" data-page-title="work">
+  <a class="skip-link" href="#main" data-i18n="skipContent">Перейти к содержанию</a>
+  <header class="header">
+    <a class="wordmark" href="index.html" aria-label="На главную">AG<span class="wordmark-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="index.html" data-i18n="homeNav">Главная</a>
+      <a href="works.html" data-i18n="work">Работы</a>
+      <a href="filmography.html" data-i18n="filmographyTitle">Фильмография</a>
+      <a href="about.html" data-i18n="about">Обо мне</a>
+    </nav>
+    <div class="header-actions">
+      <div class="languages" aria-label="Language"><button data-lang="ru" aria-pressed="true">RU</button><span>/</span><button data-lang="en" aria-pressed="false">EN</button></div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню"><span></span><span></span></button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
+      <a href="index.html" data-i18n="homeNav">Главная</a>
+      <a href="works.html" data-i18n="work">Работы</a>
+      <a href="filmography.html" data-i18n="filmographyTitle">Фильмография</a>
+      <a href="about.html" data-i18n="about">Обо мне</a>
+    </nav>
+  </header>
+  <main id="main" class="page-content">
+    <section id="work" class="work section-pad" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow muted" data-i18n="portfolio">Портфолио</p><h2 id="work-title">Featured works<span class="count">(06)</span></h2></div><p class="section-note" data-i18n="workNote">Шесть проектов.<br>Шесть разных историй.</p></div>
+      <div id="project-grid" class="project-grid"></div>
+    </section>
+  </main>
+  <dialog id="trailer-dialog" aria-labelledby="trailer-title">
+    <div class="dialog-top">
+      <p id="trailer-title" class="eyebrow"></p>
+      <button class="close-button" type="button" aria-label="Закрыть / Close" data-trailer-close autofocus>×</button>
+    </div>
+    <div id="trailer-player"></div>
+  </dialog>
+</body>
+</html>
