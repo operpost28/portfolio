@@ -6,6 +6,12 @@
     const src = cover ? encodeURI(cover.src) : `assets/project-placeholder-0${index + 1}.svg`;
     return `<article class="project"><div class="project-image${cover ? ' has-cover' : ''}"><img src="${src}" alt="${cover ? title : ''}" loading="lazy" width="${cover?.width || 1200}" height="${cover?.height || 750}">${cover ? '' : '<span class="image-label" data-i18n="frame">Временное изображение</span>'}</div><div class="project-caption"><h3 lang="ru">${title}</h3><span class="project-number">0${index + 1}</span></div></article>`;
   }).join('');
+  // Hero background loop: stay on the still poster for visitors who ask for reduced motion.
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  }
   let lang = 'ru';
   const menuButton = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('#mobile-nav');

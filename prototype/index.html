@@ -10,6 +10,9 @@
   <style>
     /* Start-page adjustments only. */
     body > main{padding-top:24px}
+    /* Hero video: soft shade on the right so the title stays readable over moving footage. */
+    .hero-video{object-fit:cover;object-position:center}
+    .hero-video ~ .hero-shade{background:linear-gradient(90deg,transparent 30%,rgba(0,0,0,.45) 58%,rgba(0,0,0,.55) 100%)}
     .home-contacts{height:63px;padding-left:8%;padding-right:8%;font-size:24px;line-height:12px;flex-wrap:nowrap}
     .home-contacts a:last-child{text-align:right}
     @media(min-width:1600px){.home-contacts{padding-left:max(8%,calc((100vw - 1400px)/2));padding-right:max(8%,calc((100vw - 1400px)/2))}}
@@ -41,7 +44,10 @@
   </header>
   <main>
     <section id="top" class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/hero-frame-hq.jpg" alt="" fetchpriority="high">
+      <video class="hero-image hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-frame-hq.jpg" aria-hidden="true">
+        <source src="assets/hero-loop-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
+        <source src="assets/hero-loop.mp4" type="video/mp4">
+      </video>
       <div class="hero-shade"></div>
       <div class="hero-content"><p class="eyebrow" data-i18n="role">Оператор-постановщик</p><h1 id="hero-title"><span data-i18n="firstName">Александр</span><span data-i18n="lastName">Горулев</span></h1><button class="play-button" data-showreel><span class="play-icon" aria-hidden="true">▶</span><span>PLAY SHOWREEL</span></button></div>
       <div class="hero-bottom"><a href="works.html" class="scroll-link"><span data-i18n="selected">Избранные работы</span><span aria-hidden="true">↓</span></a></div>
