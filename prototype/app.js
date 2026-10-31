@@ -4,7 +4,9 @@
   if (grid) grid.innerHTML = content.projects.map((title, index) => {
     const cover = content.covers?.[index];
     const src = cover ? encodeURI(cover.src) : `assets/project-placeholder-0${index + 1}.svg`;
-    return `<article class="project"><div class="project-image${cover ? ' has-cover' : ''}"><img src="${src}" alt="${cover ? title : ''}" loading="lazy" width="${cover?.width || 1200}" height="${cover?.height || 750}">${cover ? '' : '<span class="image-label" data-i18n="frame">Временное изображение</span>'}</div><div class="project-caption"><h3 lang="ru">${title}</h3><span class="project-number">0${index + 1}</span></div></article>`;
+    const page = content.pages?.[index];
+    const image = `<div class="project-image${cover ? ' has-cover' : ''}"><img src="${src}" alt="${cover ? title : ''}" loading="lazy" width="${cover?.width || 1200}" height="${cover?.height || 750}">${cover ? '' : '<span class="image-label" data-i18n="frame">Временное изображение</span>'}</div>`;
+    return `<article class="project">${page ? `<a href="${page}" tabindex="-1" aria-hidden="true">${image}</a>` : image}<div class="project-caption"><h3 lang="ru">${page ? `<a href="${page}">${title}</a>` : title}</h3><span class="project-number">0${index + 1}</span></div></article>`;
   }).join('');
   // Hero background loop: stay on the still poster for visitors who ask for reduced motion.
   const heroVideo = document.querySelector('.hero-video');
@@ -41,7 +43,8 @@
         about: 'Alexander Gorulev — Biography & Contact'
       }
     };
-    document.title = seoTitles[lang][pageTitle];
+    // Project pages carry their own titles in data-title-ru / data-title-en.
+    document.title = document.body.dataset[lang === 'en' ? 'titleEn' : 'titleRu'] || seoTitles[lang][pageTitle];
     document.querySelector('.wordmark').setAttribute('aria-label', content[lang].home);
     document.querySelector('.desktop-nav').setAttribute('aria-label', content[lang].nav);
     mobileNav.setAttribute('aria-label', content[lang].mobileNav);
