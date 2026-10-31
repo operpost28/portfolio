@@ -16,16 +16,6 @@
   const menuButton = document.querySelector('.menu-toggle');
   const mobileNav = document.querySelector('#mobile-nav');
   const dialog = document.querySelector('#showreel-dialog');
-  let preparedVideo = null;
-  function preloadShowreel() {
-    if (preparedVideo || !dialog) return;
-    preparedVideo = document.createElement('video');
-    preparedVideo.preload = 'auto';
-    preparedVideo.src = content.showreelSrc;
-    preparedVideo.load();
-  }
-  if (document.readyState === 'complete') preloadShowreel();
-  else window.addEventListener('load', preloadShowreel, { once: true });
   function setMenu(open) {
     mobileNav.hidden = !open;
     menuButton.setAttribute('aria-expanded', String(open));
@@ -80,7 +70,7 @@
   }));
   document.querySelector('[data-close]')?.addEventListener('click', () => dialog.close());
   dialog?.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
-  dialog?.addEventListener('close', () => { document.body.classList.remove('modal-open'); if (preparedVideo) { preparedVideo.pause(); preparedVideo.currentTime = 0; } });
+  dialog?.addEventListener('close', () => { document.body.classList.remove('modal-open'); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !mobileNav.hidden) { setMenu(false); menuButton.focus(); } });
   window.matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
   try { const saved = localStorage.getItem('portfolio-language'); if (saved === 'en') setLanguage(saved); } catch (_) {}
