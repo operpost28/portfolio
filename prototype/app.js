@@ -70,7 +70,8 @@
   }));
   document.querySelector('[data-close]')?.addEventListener('click', () => dialog.close());
   dialog?.addEventListener('click', event => { if (event.target === dialog) { const r = dialog.getBoundingClientRect(); if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) dialog.close(); } });
-  dialog?.addEventListener('close', () => { document.body.classList.remove('modal-open'); });
+  // Remove the Vimeo player on close (cross, click outside or Esc) so the showreel stops playing.
+  dialog?.addEventListener('close', () => { document.body.classList.remove('modal-open'); document.querySelector('#showreel-player')?.replaceChildren(); });
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !mobileNav.hidden) { setMenu(false); menuButton.focus(); } });
   window.matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
   try { const saved = localStorage.getItem('portfolio-language'); if (saved === 'en') setLanguage(saved); } catch (_) {}
