@@ -67,8 +67,14 @@
         </div>
       </section>
 
-      <section class="project-frames">
-        <p class="frames-note" data-i18n="projNoFrames">Кадры появятся после выхода проекта.</p>
+      <section class="project-frames" aria-labelledby="frames-title">
+        <h2 id="frames-title" data-i18n="projFrames">Кадры</h2>
+        <div class="frame-grid">
+          <button type="button"><img src="assets/lyubov-preodoleet-vse-2/frames/01.webp" alt="«Любовь преодолеет всё 2», кадр 1" width="2000" height="920" loading="lazy"></button>
+          <button type="button"><img src="assets/lyubov-preodoleet-vse-2/frames/02.webp" alt="«Любовь преодолеет всё 2», кадр 2" width="2000" height="1086" loading="lazy"></button>
+          <button type="button"><img src="assets/lyubov-preodoleet-vse-2/frames/03.webp" alt="«Любовь преодолеет всё 2», кадр 3" width="2000" height="920" loading="lazy"></button>
+          <button type="button"><img src="assets/lyubov-preodoleet-vse-2/frames/04.webp" alt="«Любовь преодолеет всё 2», кадр 4" width="2000" height="1159" loading="lazy"></button>
+        </div>
       </section>
 
       <nav class="project-next" aria-label="Проекты">
@@ -78,5 +84,12 @@
     </article>
   </main>
 
+  <dialog id="frame-dialog" aria-label="Кадр / Frame">
+    <div class="dialog-top">
+      <p class="eyebrow" data-i18n="lyubov_preodoleet_vse_2_title">Любовь преодолеет всё 2</p>
+      <button class="close-button" type="button" aria-label="Закрыть / Close" data-frame-close>×</button>
+    </div>
+    <img alt="">
+  </dialog>
 </body>
 </html>

@@ -39,7 +39,7 @@ PROJECTS = [
                ('projDirector', 'Роман Нестеренко', 'Roman Nesterenko'),
                ('projCompany', 'Кинокомпания TEAMFILMS', 'TEAMFILMS'),
                ('projProducers', 'Теймур Джафаров', 'Teymur Dzhafarov')],
-     'hero': 'cover.webp', 'frames': [], 'trailer': None},
+     'hero': 'cover.webp', 'frames': ['01', '02', '03', '04'], 'trailer': None},
     {'slug': 'svoboda', 'title': ('Свобода', 'Freedom'),
      'type': ('Полнометражный фильм · 2025', 'Feature film · 2025'), 'role': 'roleDop',
      'facts': [('projFormat', 'Полнометражный фильм', 'Feature film'), ('projYears', '2025', '2025'),
