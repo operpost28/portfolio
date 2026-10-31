@@ -39,3 +39,6 @@
   .frame-grid{grid-template-columns:1fr;gap:14px}
   .project-frames{padding-top:48px}
 }
+/* Odd number of frames: the last one spans the full width. */
+.frame-grid button:last-child:nth-child(odd){grid-column:1/-1}
+.frames-note{font-size:15px;color:var(--muted);margin:0}
